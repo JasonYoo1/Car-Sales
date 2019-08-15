@@ -1,14 +1,11 @@
 import React from 'react';
-import { connect  } from 'react-redux'
-import { dispatch } from 'rxjs/internal/observable/pairs';
 
 const AdditionalFeature = props => {
 
   return (
     <li>
-      {/* Add an onClick that will let you add a feature to your car */}
       <button className="button"
-      onClick={()=> dispatch({ type: 'UPDATE_FEATURE' })
+      onClick={()=> props.addFeature(props.feature)
       }
       >
         Add
@@ -18,12 +15,4 @@ const AdditionalFeature = props => {
   );
 };
 
-
-const mapStateToProps = state =>{
-  console.log(state)
-  return{
-
-  }
-}
-
-export default connect(mapStateToProps, {})(AdditionalFeature);
+export default AdditionalFeature;

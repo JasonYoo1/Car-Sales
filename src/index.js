@@ -16,6 +16,6 @@ console.log(store)
 const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
-    <App />
+        <App />
     </Provider>, 
     rootElement);
